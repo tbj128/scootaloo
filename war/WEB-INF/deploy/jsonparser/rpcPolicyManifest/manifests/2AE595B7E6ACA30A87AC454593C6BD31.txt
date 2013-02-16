@@ -1,0 +1,2 @@
+serviceClass: com.hummingtap.hotelfinder.jsonparser.client.GreetingService
+path: 38BA08E12612DB36946DC707AB66FCBB.gwt.rpc

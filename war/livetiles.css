@@ -1,0 +1,46 @@
+.tile {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: #0074d9;
+			margin:0px;
+            overflow: hidden;
+        }
+        
+        .tile .tile-content {
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        
+        .tile .tile-content .content {
+            display: block;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        
+        .tile .tile-content .content.one {
+            top: 0;
+            display: block;
+            height: 100%;
+            width: 100%;
+            
+        }
+        
+        .tile .tile-content .content.two {
+            top: 145px;
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .tile .tile-content h1 {
+            color: #fff;
+            font-family: 'segoe ui', sans-serif;
+            font-weight: normal;
+            text-align: center;
+			font-size:25px;
+            margin-top: 60px;        
+        }

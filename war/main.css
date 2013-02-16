@@ -1,0 +1,493 @@
+/* 
+* Hotel Finder Main Application CSS
+* Open source elements via Masonry plugin
+* Author: Tom Jin
+* @Author: @hummingtap
+* Date Created: Feb 2, 2013
+
+ */
+
+ 
+ /**** Main Page Layout ****/
+ 
+ body {
+	font-family: 'Gafata', sans-serif;
+ }
+ 
+ #loading {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+ }
+ 
+ .page-container {
+	width:100%;
+	height:100%;
+ }
+ 
+ .side-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 230px;
+	background:url('../img/sidepattern.png') no-repeat 0 0;
+	background-color:#292929;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	-webkit-user-select: none;
+	-webkit-box-shadow: 5px 0px 6px 0px black;
+	   -moz-box-shadow: 5px 0px 6px 0px black;
+	        box-shadow: 5px 0px 6px 0px black;
+	
+ }
+ 
+ .side-bar .view-box {
+	width:200px;
+	margin:0 auto;
+	margin-top:30px;
+}
+
+.side-bar .options {
+	width:100%;
+	margin-top:2px;
+	height:30px;
+	background-color:#3f3f3f;
+	color:#f4f4f4;
+	font-size:18px;
+	padding: 10px 0 0 30px;
+	cursor:pointer;
+}
+
+.side-bar .options-specific {
+	width:100%;
+	margin-top:2px;
+	height:30px;
+	background-color:#747474;
+	color:#f4f4f4;
+	font-size:18px;
+	padding: 10px 0 0 45px;
+	cursor:pointer;
+}
+
+.side-bar .selected {
+	background-color:#3b0018 !important;
+}
+.side-bar .spacer {
+	clear:both;height:50px;
+	-webkit-box-shadow: 0px 5px 6px -5px black;
+	   -moz-box-shadow: 0px 5px 6px -5px black;
+	        box-shadow: 0px 5px 6px -5px black;
+}
+
+.side-bar .bottom-footer {
+	position:absolute;
+	bottom:20px;
+	left:10px;
+	color:#757575;
+	font-size:14px;
+}
+
+
+
+.side-bar a {
+		opacity:1;
+		/* Firefox */
+		-moz-transition-property: opacity,background,color;
+		-moz-transition-duration: 0.3s;
+		/* WebKit */
+		-webkit-transition-property: opacity,background,color;
+		-webkit-transition-duration: 0.3s;
+		/* Opera */
+		-o-transition-property: opacity,background,color;
+		-o-transition-duration: 0.3s;
+		/* Standard */
+		transition-property: opacity,background,color;
+		transition-duration: 0.3s;
+   }
+  .side-bar a:hover {
+	opacity:0.9;
+}
+
+
+
+.top-bar {
+	position: absolute;
+	top: 0;
+	left: 230px;
+	right: 0;
+	height: 67px;
+	background-color:#000;
+ }
+ 
+ 
+ 
+ .top-bar .profile-box {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	max-width:250px;
+ }
+ 
+  .top-bar .profile-box img {
+	float:left
+  }
+  
+ .top-bar .profile-box a {
+	float:right;
+	margin:12px 0 0 15px;
+	font-size:14px;
+	color:#f4f4f4;
+	text-decoration:none;
+ }
+ 
+ 
+  .top-bar .results-box {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	color:#ababab;
+	font-size:20px;
+ }
+ 
+   .top-bar .results-box strong {
+	color:#fff;
+}
+   .top-bar .results-box span {
+	font-size:14px;
+}
+
+.main-tiles {
+	position:absolute;
+	top:75px;
+	left: 250px;
+	right: 0;
+}
+
+
+
+/* Gradient Buttons */	
+
+.tab-tiles {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	width:95px;
+	height:35px;
+	float:left;
+	padding:8px 0 0 5px;
+	-webkit-border-radius: 10px 0 0 10px; 
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+.tab-map {
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	width:95px;
+	height:35px;
+	float:right;
+	padding:8px 0 0 5px;
+	-webkit-border-radius: 0 10px 10px 0; 
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+}
+.tab-tiles:hover, .tab-map:hover {
+	text-decoration: none;
+}
+.tab-tiles:active, .tab-map:active {
+	position: relative;
+	top: 1px;
+}
+
+.blue {
+	background: #4e688a;
+	color:#9b9d9f;
+}
+.blue img {
+	opacity:0.7;
+}
+.blue-active {
+	background: #52b5de;
+	color:#fff;
+}
+.blue-active img {
+	opacity:1;
+}
+.blue:hover {
+	background: #328cb1;
+	color:#fff;
+}
+
+.pink {
+	background: #a7124e;
+	color:#ad919c;
+}
+.pink img {
+	opacity:0.7;
+}
+.pink-active {
+	background: #f11a70;
+	color:#fff;
+}
+.pink-active img {
+	opacity:1;
+}
+.pink:hover {
+	background: #871c47;
+	color:#fff;
+}
+
+	
+/* Ribbon Effect - via CSS-Tricks */
+	  
+.imgwrapper {
+	width:150px;
+	height:150px;
+}
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #d62489;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d62489), to(#de3193)); 
+  background-image: -webkit-linear-gradient(top, #d62489, #de3193); 
+  background-image:    -moz-linear-gradient(top, #d62489, #de3193); 
+  background-image:     -ms-linear-gradient(top, #d62489, #de3193); 
+  background-image:      -o-linear-gradient(top, #d62489, #de3193); 
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}
+	  
+/* Hotel Overlay */
+
+.hotel-overlay-large {
+	height:200px;
+	width:100%;
+	color:#fff;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 86%, rgba(0,0,0,0.9) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(86%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0.9))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 ); /* IE6-9 */
+	font-family: 'segoe ui',sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+	position:absolute;
+	top:210px;
+}
+
+.hotel-overlay-large div {
+	padding:110px 0 0 15px;
+}
+
+.hotel-overlay-small div {
+	padding:30px 0 0 8px;
+}
+
+.hotel-overlay-small {
+	height:100px;
+	width:100%;
+	color:#fff;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 86%, rgba(0,0,0,0.9) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(86%,rgba(0,0,0,0.9)), color-stop(100%,rgba(0,0,0,0.9))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 86%,rgba(0,0,0,0.9) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e6000000',GradientType=0 ); /* IE6-9 */
+	font-family: 'segoe ui',sans-serif;
+    font-weight: normal;
+    font-size: 22px;
+	
+	position:absolute;
+	top:100px;
+}
+ 
+.large-box {
+	padding:0px 0 0 8px !important;
+	margin-top:25px;
+	height:20px;
+	width:100px;
+	font-size:14px;
+	color:#bceefd;
+	background-color:#24aed6;
+	-webkit-transition: width 0.2s ease;  
+    -moz-transition: width 0.2s ease;  
+    -o-transition: width 0.2s ease;  
+    -ms-transition: width 0.2s ease;  
+    transition: width 0.2s ease;  
+}
+ .large-box:hover {
+	width:120px;
+ }
+ 
+ .container-tile {
+	margin:5px;
+ }
+ 
+ 
+ 
+ 		
+/**** Displays the loading image ****/
+#container.masonry #loading {display: none}
+
+/**** Transitions ****/
+
+/* Rearrange transitions */
+#container,
+#container .container-tile {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+#container {
+animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+#container .container-tile {
+	position: absolute; top: -1000px; left: -1000px;
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+		  
+}
+
+#container .container-tile:hover {
+	box-shadow: 0 0 10px rgba(80, 187, 255, 1);
+	-webkit-box-shadow: 0 0 10px rgba(80, 187, 255, 1); 
+    -moz-box-shadow: 0 0 10px rgba(80, 187, 255, 1); 
+	-o-box-shadow: 0 0 10px rgba(80, 187, 255, 1); 
+}
+
+/* Fade in transitions */
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/****** Map Styles ******/
+
+		iframe { 
+			vertical-align: top;
+		}
+ 
+		#canvas_holder{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width:100%; 
+			height:100%;
+			z-index: 0;
+		}
+ 
+		#map_canvas{
+			width:100%;
+			height:100%; 
+			position: "absolute"; 
+			top: 0px; 
+			left: 0px; 
+			opacity:0.4;
+			overflow: "hidden";
+		}
+ 
+		#holder{
+			width: 300px;
+			background: rgba(0,0,0,0.8);
+			z-index: 1000;
+			position: absolute;
+			color: white;
+			padding: 10px;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			-o-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-ms-border-radius: 10px;
+		}
+ 
+ 
+ 
